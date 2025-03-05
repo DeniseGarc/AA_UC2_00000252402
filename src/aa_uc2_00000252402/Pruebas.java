@@ -6,7 +6,7 @@ package aa_uc2_00000252402;
 
 /**
  *
- * @author Alici
+ * @author Alicia Denise García Acosta 00000252402
  */
 public class Pruebas {
 
@@ -14,7 +14,15 @@ public class Pruebas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int[] a = {6, 4, 2, 1,};
+        for (int i : a) {
+            System.out.print(i + " ");
+        }
+        Ordenamientos.burbuja(a);
+        System.out.println("");
+        for (int i : a) {
+            System.out.print(i + " ");
+        }
     }
-    
+
 }
