@@ -14,12 +14,14 @@ public class Pruebas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] a = {6, 4, 2, 1,};
+        int[] a = {7, 6, 5};
+        System.out.print("Arreglo desordenado: ");
         for (int i : a) {
             System.out.print(i + " ");
         }
-        Ordenamientos.burbuja(a);
+        Ordenamientos.insercion(a);
         System.out.println("");
+        System.out.print("Arreglo ordenado: ");
         for (int i : a) {
             System.out.print(i + " ");
         }
