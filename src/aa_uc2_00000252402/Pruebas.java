@@ -19,7 +19,7 @@ public class Pruebas {
         for (int i : a) {
             System.out.print(i + " ");
         }
-        Ordenamientos.insercion(a);
+        Ordenamientos.seleccion(a);
         System.out.println("");
         System.out.print("Arreglo ordenado: ");
         for (int i : a) {

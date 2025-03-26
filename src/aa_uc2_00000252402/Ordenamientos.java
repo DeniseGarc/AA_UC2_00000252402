@@ -59,4 +59,33 @@ public class Ordenamientos {
         return a; // salida: 1
     } // total: 2n^2 + (n^2-n)/2 + 6n - 5
     // orden de crecimiento -> O(n^2)
+
+    /**
+     * Implementa el algoritmo de ordenamiento por Selección para ordenar un
+     * arreglo de enteros de menor a mayor.
+     *
+     * @param a Un arreglo de enteros a ordenar.
+     * @return El arreglo ordenado en orden ascendente.
+     *
+     * Precondiciones: - El arreglo de entrada no debe ser nulo. - Puede
+     * contener cualquier conjunto de enteros, incluidos valores repetidos.
+     *
+     * Postcondiciones: - El arreglo devuelto tendrá los mismos elementos que el
+     * original, pero ordenados en orden ascendente.
+     */
+    public static int[] seleccion(int[] a) {
+        for (int i = 0; i < a.length - 1; i++) { // asignacion: 1 comparacion: n incremento: n-1    total= 2n
+            int minIndex = i; // asignacion: n-1
+            for (int j = i + 1; j < a.length; j++) { //asignacion: n-1 comparacion: ((n^2+n)/2) - 1 incrementos: (n^2-n)/2 
+                if (a[j] < a[minIndex]) { // comparaciones: (n^2-n)/2
+                    minIndex = j; // asignaciones: (n^2-n)/2
+                }
+            }
+            int aux = a[minIndex]; //asignacion: n-1
+            a[minIndex] = a[i]; //asignacion: n-1
+            a[i] = aux; //asignacion: n-1
+        }
+        return a; // salida: 1
+    } // total: 2n^2 + 6n - 6
+    // orden de crecimiento -> O(n^2)
 }
